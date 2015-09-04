@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Start</title>
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <!-- Chrome for Android theme color -->
+  <meta name="theme-color" content="#303F9F">
+
+  <!-- Web Application Manifest -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Tile color for Win8 -->
+  <meta name="msapplication-TileColor" content="#3372DF">
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="Start">
+  <link rel="icon" sizes="192x192" href="image/touch/chrome-touch-icon-192x192.png">
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Start">
+  <link rel="apple-touch-icon" href="image/touch/apple-touch-icon.png">
+
+  <!-- Tile icon for Win8 (144x144) -->
+  <meta name="msapplication-TileImage" content="image/touch/ms-touch-icon-144x144-precomposed.png">
+
+  <!--build:css style/main.css-->
+  <link rel="stylesheet" href="/style/main.css">
+  <!--endbuild-->
+
+  <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.yellow-light_blue.min.css">
+  <script src="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+  <div id="root"></div>
+<!--build:js script/bundle.js-->
+  <script src="/system.js"></script>
+  <script src="/config.js"></script>
+  <script>
+      System.import('/script/index.js');
+  </script>
+<!--endbuild-->
+</body>
+</html>
