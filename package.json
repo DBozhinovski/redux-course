@@ -4,6 +4,7 @@
   "description": "Sample react, redux project demonstrating async api calls and systemjs module loading",
   "main": "",
   "dependencies": {
+    "lodash": "^3.10.1",
     "react": "^0.14.0-beta",
     "react-dom": "^0.14.0-beta",
     "react-redux": "^2.1.0",

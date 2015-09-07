@@ -1,4 +1,5 @@
 import React from 'react';
+import _ from 'lodash';
 
 export class Content extends React.Component {
   constructor(props) {
@@ -15,7 +16,7 @@ export class Content extends React.Component {
     this.items = this.props.results.artists ? this.props.results.artists.items : [];
 
     if (this.items.length > 0) {
-      this.items.forEach((item)=> {
+      _.forEach(this.items, (item)=> {
         if (item.images.length > 0) {
           rows.push(
             <div className='mdl-card' key={item.id}>

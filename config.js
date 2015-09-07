@@ -13,6 +13,7 @@ System.config({
         'babel': 'npm:babel-core/browser.js',
         'babel/external-helpers': 'npm:babel-core/external-helpers.js',
         'fetch': 'npm:whatwg-fetch/fetch.js',
+        'lodash': 'npm:lodash/index.js', 
         'redux': 'npm:redux/dist/redux.js',
         'redux-logger': 'npm:redux-logger/build/index.js',
         'redux-logger': 'npm:redux-logger/build/createLogger.js',
