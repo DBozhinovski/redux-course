@@ -1,7 +1,7 @@
 # Sample React/Redux
 A sample [React](http://facebook.github.io/react/), [Redux](http://rackt.github.io/redux/), ES6 project with [sass](http://sass-lang.com/), [postcss](https://github.com/postcss/postcss) and [systemjs](https://github.com/systemjs/systemjs) workflows.
 
-The sample demonstrates an async search against the Spotify Api to return a list of Artists based on a name search.
+The sample demonstrates an async search against the Spotify Api and returns a list of Artists based on a name search. The UI utilizes Google's [Material Design Lite](http://www.getmdl.io/index.html) look and feel.
 
 ##Setup your dev environment
 
