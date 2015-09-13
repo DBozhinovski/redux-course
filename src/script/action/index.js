@@ -10,7 +10,7 @@ export const ARTIST_FAILURE = 'ARTIST_FAILURE';
  * action creators
  */
 
-function fetchArtist(artist) {
+function requestArtist(artist) {
   return {
     [SPOTIFY_API]: {
       types: [ARTIST_REQUEST, ARTIST_SUCCESS, ARTIST_FAILURE],
@@ -19,10 +19,13 @@ function fetchArtist(artist) {
   };
 }
 
-export function handleSearch(userInput) {
-
+export function fetchArtist(userInput) {
   return (dispatch, getState) => {
-    return dispatch(fetchArtist(userInput));
-
+    if(userInput.length == 0) {
+      return dispatch;
+    }
+    else {
+      return dispatch(requestArtist(userInput));
+    }
   };
 }
