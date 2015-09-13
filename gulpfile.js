@@ -22,8 +22,7 @@ gulp.task('start', ['css'], function () {
       server: {
           baseDir: ['root'],
           routes: {
-            '/system.js': 'node_modules/systemjs/dist/system.js',
-            '/node_modules': 'node_modules',
+            '/jspm_packages': 'jspm_packages',
             '/config.js': 'config.js',
             '/script': 'src/script',
             '/style': 'build/style'
@@ -75,7 +74,7 @@ gulp.task('copy', function () {
 });
 
 gulp.task('bundle', shell.task(
-    'node build.js'
+  'jspm bundle-sfx ./src/script/index ./dist/script/bundle.js --inject --inline-source-maps --minify'
   )
 );
 
