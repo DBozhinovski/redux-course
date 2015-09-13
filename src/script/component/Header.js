@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 
 export class Header extends React.Component{
   handleSubmit(e) {
@@ -7,7 +8,7 @@ export class Header extends React.Component{
   };
 
   componentDidMount() {
-    componentHandler.upgradeDom();
+    componentHandler.upgradeElement(ReactDOM.findDOMNode(this.refs.inputContainer, 'MaterialTextfield'));
   }
 
   render() {
@@ -17,14 +18,9 @@ export class Header extends React.Component{
         <span className="mdl-layout-title">Search Spotify Artist</span>
         <div className="mdl-layout-spacer"></div>
         <form className='form1' onSubmit={this.handleSubmit.bind(this)}>
-          <div className='mdl-textfield mdl-js-textfield mdl-textfield--expandable'>
-            <label className="mdl-button mdl-js-button mdl-button--icon" htmlFor="userInput">
-              <i className="material-icons">search</i>
-            </label>
-            <div className='mdl-textfield__expandable-holder'>
-              <input className='mdl-textfield__input' type='text' id='userInput' ref='userInput'/>
-              <label className="mdl-textfield__label" htmlFor="userInput">Enter Artist Name</label>
-            </div>
+          <div className='mdl-textfield mdl-js-textfield mdl-textfield--floating-label' ref='inputContainer'>
+            <input className='mdl-textfield__input' type='text' id='userInput' ref='userInput' required/>
+            <label className="mdl-textfield__label" htmlFor="userInput">Enter Artist Name</label>
           </div>
           <button className='mdl-button mdl-js-button mdl-button--raised mdl-button--accent' type='submit'>Go</button>
         </form>

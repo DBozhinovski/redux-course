@@ -6,7 +6,6 @@ import {handleSearch} from '../action/index.js';
 
 class Layout extends React.Component{
   componentDidMount() {
-    componentHandler.upgradeDom();
   }
 
   render() {

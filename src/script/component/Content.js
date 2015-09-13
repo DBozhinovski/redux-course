@@ -8,7 +8,6 @@ export class Content extends React.Component {
   }
 
   componentDidMount() {
-    componentHandler.upgradeDom();
   }
 
   render() {
