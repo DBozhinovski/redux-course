@@ -20,6 +20,7 @@ System.config({
         'redux-thunk': 'npm:redux-thunk/lib/index.js',
         'react': 'npm:react/dist/react.js',
         'react-dom': 'npm:react/dist/react-dom.js',
-        'react-redux': 'npm:react-redux/dist/react-redux.js'
+        'react-redux': 'npm:react-redux/dist/react-redux.js',
+        'react-router': 'npm:react-router/lib/index.js'
     }
 });
