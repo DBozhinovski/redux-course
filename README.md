@@ -25,7 +25,7 @@ The sample demonstrates an async search against the Spotify Api and returns a li
 - Launch terminal
 - ```git clone https://github.com/earlsioson/sample-react-redux-jspm.git```
 - ```cd sample-react-redux-jspm```
-- ```npm install gulp mocha jspm -g```
+- ```npm install gulp jspm -g```
 - ```npm install```
 - ```jspm install```
 
