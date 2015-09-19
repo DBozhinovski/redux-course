@@ -36,3 +36,9 @@ The sample demonstrates an async search against the Spotify Api and returns a li
     [browser-sync](http://www.browsersync.io/)
 - Making code changes will automatically reload
     the app into the browser so you can see your changes
+
+####Create a distribution directory for production
+- Launch terminal
+- ```gulp publish```
+- This task creates a self contained
+     directory, named "dist", minifies and bundles all js dependencies into one file and updates the index.html to link to it. This directory can then serve as the root for an http server.
