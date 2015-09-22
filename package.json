@@ -6,6 +6,8 @@
   "dependencies": {},
   "devDependencies": {
     "autoprefixer": "^5.2.0",
+    "babel": "^5.8.23",
+    "babel-core": "^5.8.25",
     "browser-sync": "^2.8.2",
     "chai": "^3.2.0",
     "cssnext": "^1.8.4",
@@ -21,12 +23,11 @@
     "sinon": "^1.16.1"
   },
   "scripts": {
-    "test": "mocha --compilers js:babel/register"
+    "test": "./node_modules/mocha/bin/mocha --compilers js:babel/register"
   },
   "author": "Earl Sioson",
   "license": "MIT",
   "jspm": {
-    "directories": {},
     "dependencies": {
       "fetch": "github:github/fetch@^0.9.0",
       "lodash": "npm:lodash@^3.10.1",
@@ -34,8 +35,8 @@
       "react-dom": "npm:react-dom@^0.14.0-rc1",
       "react-redux": "npm:react-redux@^2.1.1",
       "react-router": "npm:react-router@^1.0.0-rc1",
-      "redux": "npm:redux@^2.0.0",
-      "redux-logger": "npm:redux-logger@^1.0.6",
+      "redux": "npm:redux@^3.0.0",
+      "redux-logger": "npm:redux-logger@^1.0.8",
       "redux-thunk": "npm:redux-thunk@^0.1.0"
     },
     "devDependencies": {
