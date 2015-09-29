@@ -17,7 +17,7 @@ class Layout extends React.Component{
   render() {
     const { results } = this.props;
     return (
-      <div className='mdl-layout mdl-js-layout mdl-layout--fixed-header'>
+      <div className='mdl-layout mdl-layout--fixed-header'>
         <Header onUserInput={this.handleUserInput}/>
         <Content results={this.props.results}/>
       </div>
