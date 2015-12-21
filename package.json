@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "description": "Sample react, redux project demonstrating async api calls and systemjs module loading",
   "main": "",
-  "dependencies": {},
+  "dependencies": {
+    "expect": "^1.13.4"
+  },
   "devDependencies": {
     "autoprefixer": "^5.2.0",
     "babel": "^5.8.23",

@@ -9,11 +9,11 @@ var runSequence = require('run-sequence');
 var sass = require('gulp-sass');
 var shell = require('gulp-shell');
 
-var reload = browserSync.reload;
+// var reload = browserSync.reload;
 
 var processors = [
   autoprefixer({browsers: ['last 1 version']}),
-  cssnext,
+  cssnext
 ];
 
 gulp.task('start', ['css'], function () {
@@ -27,12 +27,11 @@ gulp.task('start', ['css'], function () {
             '/script': 'src/script',
             '/style': 'build/style'
           }
-        },
-      browser: 'google chrome',
+        }
     }
   );
-  gulp.watch(["root/**/*.html"]).on('change', browserSync.reload);
-  gulp.watch("src/script/**/*.js").on('change', browserSync.reload);
+  gulp.watch(['root/**/*.html']).on('change', browserSync.reload);
+  gulp.watch('src/script/**/*.js').on('change', browserSync.reload);
   gulp.watch(['src/style/**/*'], ['css']);
 });
 
@@ -67,14 +66,15 @@ gulp.task('copy', function () {
         {base: 'root'})
       .pipe(gulp.dest('dist'));
   gulp.src([
-        'root/**/*.html',
+        'root/**/*.html'
         ])
       .pipe(useref())
       .pipe(gulp.dest('dist'));
 });
 
 gulp.task('bundle', shell.task(
-  'jspm bundle-sfx ./src/script/index ./dist/script/bundle.js --inject --inline-source-maps --minify'
+  'jspm bundle-sfx ./src/script/index ./dist/script/bundle.js ' +
+  '--inject --inline-source-maps --minify'
   )
 );
 
