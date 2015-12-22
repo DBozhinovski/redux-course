@@ -17,6 +17,8 @@ System.config({
     "babel": "npm:babel-core@5.8.24",
     "babel-runtime": "npm:babel-runtime@5.8.24",
     "core-js": "npm:core-js@1.1.4",
+    "deep-freeze": "npm:deep-freeze@0.0.1",
+    "expect": "npm:expect@1.13.4",
     "fetch": "github:github/fetch@0.9.0",
     "lodash": "npm:lodash@3.10.1",
     "react": "npm:react@0.14.0-rc1",
@@ -73,6 +75,10 @@ System.config({
     "npm:core-util-is@1.0.1": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0"
     },
+    "npm:define-properties@1.1.2": {
+      "foreach": "npm:foreach@2.0.5",
+      "object-keys": "npm:object-keys@1.0.9"
+    },
     "npm:domain-browser@1.1.4": {
       "events": "github:jspm/nodelibs-events@0.1.1"
     },
@@ -81,15 +87,36 @@ System.config({
       "process": "github:jspm/nodelibs-process@0.1.1",
       "through": "npm:through@2.3.8"
     },
+    "npm:es-abstract@1.4.3": {
+      "es-to-primitive": "npm:es-to-primitive@1.0.0",
+      "function-bind": "npm:function-bind@1.0.2",
+      "is-callable": "npm:is-callable@1.1.1",
+      "is-regex": "npm:is-regex@1.0.3"
+    },
+    "npm:es-to-primitive@1.0.0": {
+      "is-callable": "npm:is-callable@1.1.1",
+      "is-date-object": "npm:is-date-object@1.0.1",
+      "is-symbol": "npm:is-symbol@1.0.1"
+    },
     "npm:esprima-fb@13001.1001.0-dev-harmony-fb": {
       "fs": "github:jspm/nodelibs-fs@0.1.2",
       "process": "github:jspm/nodelibs-process@0.1.1"
+    },
+    "npm:expect@1.13.4": {
+      "child_process": "github:jspm/nodelibs-child_process@0.1.0",
+      "fs": "github:jspm/nodelibs-fs@0.1.2",
+      "is-equal": "npm:is-equal@1.4.2",
+      "is-regex": "npm:is-regex@1.0.3",
+      "object-inspect": "npm:object-inspect@1.1.0"
     },
     "npm:fbjs@0.2.1": {
       "core-js": "npm:core-js@1.1.4",
       "process": "github:jspm/nodelibs-process@0.1.1",
       "promise": "npm:promise@7.0.4",
       "whatwg-fetch": "npm:whatwg-fetch@0.9.0"
+    },
+    "npm:has@1.0.1": {
+      "function-bind": "npm:function-bind@1.0.2"
     },
     "npm:history@1.9.0": {
       "deep-equal": "npm:deep-equal@1.0.1",
@@ -104,6 +131,22 @@ System.config({
       "envify": "npm:envify@3.4.0",
       "process": "github:jspm/nodelibs-process@0.1.1"
     },
+    "npm:is-arrow-function@2.0.3": {
+      "is-callable": "npm:is-callable@1.1.1"
+    },
+    "npm:is-equal@1.4.2": {
+      "has": "npm:has@1.0.1",
+      "is-arrow-function": "npm:is-arrow-function@2.0.3",
+      "is-boolean-object": "npm:is-boolean-object@1.0.0",
+      "is-callable": "npm:is-callable@1.1.1",
+      "is-date-object": "npm:is-date-object@1.0.1",
+      "is-generator-function": "npm:is-generator-function@1.0.3",
+      "is-number-object": "npm:is-number-object@1.0.3",
+      "is-regex": "npm:is-regex@1.0.3",
+      "is-string": "npm:is-string@1.0.4",
+      "is-symbol": "npm:is-symbol@1.0.1",
+      "object.entries": "npm:object.entries@1.0.3"
+    },
     "npm:jstransform@10.1.0": {
       "base62": "npm:base62@0.1.1",
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
@@ -114,6 +157,12 @@ System.config({
     },
     "npm:lodash@3.10.1": {
       "process": "github:jspm/nodelibs-process@0.1.1"
+    },
+    "npm:object.entries@1.0.3": {
+      "define-properties": "npm:define-properties@1.1.2",
+      "es-abstract": "npm:es-abstract@1.4.3",
+      "function-bind": "npm:function-bind@1.0.2",
+      "has": "npm:has@1.0.1"
     },
     "npm:path-browserify@0.0.0": {
       "process": "github:jspm/nodelibs-process@0.1.1"

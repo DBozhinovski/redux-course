@@ -69,7 +69,9 @@ const TodoApp = React.createClass({
         }} />
         <button
           onClick={() => {
-            store.dispatch({
+            store.dispatch({ // Binding onClick to the store!
+              // So any store action can be triggered in various ways!
+              // DOM, XHR, Sockets, whatever...
               type: 'ADD_TODO',
               text: this.input.value,
               id: new Date().getTime()
@@ -81,20 +83,7 @@ const TodoApp = React.createClass({
         </button>
         <ul>
           {this.props.todos.map(_todo =>
-            <li key={_todo.id}
-                onClick={() => {
-                  store.dispatch({
-                    type: 'TOGGLE_TODO', // Subscribing to toggle here, just like in the previous example
-                    id: _todo.id
-                  });
-                }}
-                style={{
-                  textDecoration:
-                    _todo.completed ?
-                     'line-through' :
-                     'none'
-                }}
-            >
+            <li key={_todo.id}>
               {_todo.text}
             </li>
           )}

@@ -84,7 +84,7 @@ const TodoApp = React.createClass({
             <li key={_todo.id}
                 onClick={() => {
                   store.dispatch({
-                    type: 'TOGGLE_TODO', // Subscribing to toggle here, just like in the previous example
+                    type: 'TOGGLE_TODO',
                     id: _todo.id
                   });
                 }}
