@@ -85,39 +85,6 @@ const FilterLink = ({
   );
 };
 
-const Todo = ({
-  onClick,
-  completed,
-  text
-}) => (
-  <li
-      onClick={onClick}
-      style={{
-        textDecoration:
-            completed ?
-           'line-through' :
-           'none'
-      }}
-  >
-    {text}
-  </li>
-);
-
-const TodoList = ({
-  todos, //eslint-disable-line no-shadow
-  onTodoClick
-}) => (
-  <ul>
-    {todos.map(todo => //eslint-disable-line no-shadow
-      <Todo
-        key={todo.id}
-        {...todo}
-        onClick={() => onTodoClick(todo.id)}
-      />
-    )}
-  </ul>
-);
-
 // Get visible todos by filter
 const getVisibleTodos = (
   _todos,
@@ -159,15 +126,26 @@ const TodoApp = React.createClass({
         >
           Add Todo
         </button>
-        <TodoList
-          todos={visibleTodos}
-          onTodoClick={id =>
-            store.dispatch({
-              type: 'TOGGLE_TODO',
-              id
-            })
-          }
-        />
+        <ul>
+          {visibleTodos.map(_todo =>
+            <li key={_todo.id}
+                onClick={() => {
+                  store.dispatch({
+                    type: 'TOGGLE_TODO', // Subscribing to toggle here, just like in the previous example
+                    id: _todo.id
+                  });
+                }}
+                style={{
+                  textDecoration:
+                    _todo.completed ?
+                     'line-through' :
+                     'none'
+                }}
+            >
+              {_todo.text}
+            </li>
+          )}
+        </ul>
         {/* Using a bunch of dummy components here: */}
         <p>Show: {' '}
           <FilterLink
